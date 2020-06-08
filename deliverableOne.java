@@ -5,32 +5,40 @@ public class deliverableOne {
 	public static void main(String[] args) {
 	    Scanner scnr = new Scanner(System.in);
 	    
-	    String vacationType = "userInput";
-	    boolean valid = false;
-	    		
-	    while (!valid) {
-	    	System.out.println("What kind of trip would you like to go on, musical, tropical, or adventurous?");
+	    String vacationType;
+	    int groupSize;
+	        		
+	    System.out.println("What kind of trip would you like to go on, musical, tropical, or adventurous?");
 	    	vacationType = scnr.nextLine();
-	    	//check if user picked valid vacation type and if they didn't, repeat vacation type question
-	    	if (vacationType.equals("musical") || vacationType.equals("tropical") || vacationType.equals("adventurous")) {
-	    		valid = true;
-	    }	else {
-	    			System.out.println("This vacation type is invalid. Please select one of the following trip types: musical, tropical, or adventurous");
-	    		} 
-	    
-	    
-
+	    System.out.println("How many are in your group?");
+	    	groupSize = scnr.nextInt();
+	   
+	    String destination = "assignedBelow";	
+	    if (vacationType.equals("musical")) { 
+	    	destination = "New Orleans"; 
+	    } else if (vacationType.equals("tropical")) {
+	    	destination = "a Beach Vacation in Mexico";
+	    } else if (vacationType.equals("adventurous")) {
+	    	destination = "Whitewater Rafting the Grand Canyon";
 	    	}
-
+	    
+	    String travelSuggestion = "assignedBelowTwo";	
+	    if (groupSize ==1 || groupSize ==2) { 
+	    	travelSuggestion = "First Class"; 
+	    } else if (groupSize >=3 && groupSize <=5) {
+	    	travelSuggestion = "a Helicopter";
+	    } else if (groupSize >=6) {
+	    	travelSuggestion = "a Charter Flight";
+	    	}
+	    	
 	    scnr.close();
+	    
+	    System.out.println("Since you're a group of " + groupSize + " going on " + vacationType + " vacation, you should take " + travelSuggestion + " to " + destination );
+	
+	}	    	
+		
+
 	}
-
-}
-
-
-
-
-
-
+	
 
 
