@@ -33,7 +33,9 @@ public class deliverableOne {
 	    	
 	    scnr.close();
 	    
-	    System.out.println("Since you're a group of " + groupSize + " going on " + vacationType + " vacation, you should take " + travelSuggestion + " to " + destination );
+	    String result = ("Since you're a group of " + groupSize + " going on " + vacationType + " vacation, you should take " + travelSuggestion + " to " + destination );
+	    
+	    System.out.println(result);
 	
 	}	    	
 		
